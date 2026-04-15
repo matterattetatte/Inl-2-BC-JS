@@ -43,7 +43,8 @@ export async function sendTransaction(signer, toAddress, amountEth) {
     if (!signer) throw new Error('Signer required')
     const tx = await signer.sendTransaction({
         to: toAddress,
-        value: parseEther(amountEth)
+        value: parseEther(amountEth),
+        gasLimit: 21000,
     })
     return await tx.wait()
 }
