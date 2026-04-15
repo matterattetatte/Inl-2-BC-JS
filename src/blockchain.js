@@ -1,7 +1,7 @@
 import * as ethers from 'https://cdn.jsdelivr.net/npm/ethers@6.13.2/+esm'
 import { formatEther, parseEther } from './utils.js'
 
-const RPC = window.location.hostname === 'localhost' ? 'http://localhost:8545' : 'https://rpc.sepolia.org'
+const RPC = window.location.hostname === 'localhost' ? 'http://localhost:8545' : 'https://0xrpc.io/sep'
 
 let cachedProvider = null
 
