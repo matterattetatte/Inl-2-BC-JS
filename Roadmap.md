@@ -36,7 +36,7 @@ project/
 - [ ] 🛠️ Use browser DevTools for network debugging
 
 ## 📤 Submission Preparation
-- [ ] ✅ Works in browser without local server (GitHub Pages ready)
+- [ ] ✅ Works in browser without local server (GitHub Pages ready). Host anvil on some cloud provider.
 - [ ] 📖 README.md with Anvil setup, MetaMask config, test instructions
 - [ ] 📸 Screenshots of balance display and successful transaction
 - [ ] 🔗 Live demo link from GitHub Pages

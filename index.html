@@ -9,12 +9,38 @@
 </head>
 <body>
     <div class="container">
-        <h1>Block Explorer</h1>
+        <h1>🚀 Anvil Block Explorer</h1>
         
+        <div id="status" class="status disconnected">🔌 Disconnected</div>
+        
+        <section class="card">
+            <h2>💰 Balance Check</h2>
+            <div class="input-group">
+                <input id="address" placeholder="0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266">
+                <button id="getBalance">Check</button>
+            </div>
+            <div id="balance" class="result"></div>
+        </section>
+        
+        <section class="card">
+            <h2>🧱 Block Height</h2>
+            <button id="getBlock">Refresh</button>
+            <div id="blockNum" class="result"></div>
+        </section>
+        
+        <section class="card">
+            <h2>📤 Send Transaction</h2>
+            <div class="input-group">
+                <input id="toAddr" placeholder="0x70997970C51812dc3A010C7d01b50e0d17dc79C8">
+                <input id="amount" type="number" step="0.001" placeholder="0.01">
+                <button id="sendTx" disabled>Send ETH</button>
+            </div>
+            <div id="txHash" class="result"></div>
+        </section>
     </div>
 
-    <script type="module" src="./src/ui.js"></script>
     <script type="module" src="./src/utils.js"></script>
     <script type="module" src="./src/blockchain.js"></script>
+    <script type="module" src="./src/ui.js"></script>
 </body>
 </html>
