@@ -21,12 +21,12 @@ project/
 ```
 
 ## ✅ Core Features (Godkänt/Pass)
-- [ ] 📍 Address input field with fetch balance button
-- [ ] 💰 Display current Ether balance for entered address
-- [ ] 🧱 Show current blockchain block number/height
-- [ ] 📤 Transaction form with to-address and ETH amount inputs
-- [ ] 🚀 Send transaction button that broadcasts to blockchain
-- [ ] 🔗 MetaMask wallet connection integration
+- [x] 📍 Address input field with fetch balance button
+- [x] 💰 Display current Ether balance for entered address
+- [x] 🧱 Show current blockchain block number/height
+- [x] 📤 Transaction form with to-address and ETH amount inputs
+- [x] 🚀 Send transaction button that broadcasts to blockchain
+- [x] 🔗 MetaMask wallet connection integration
 
 ## 🧪 Testing & Debugging
 - [ ] 🧑‍💻 Test with Anvil's 10 pre-funded test accounts
