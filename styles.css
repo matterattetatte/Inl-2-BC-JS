@@ -55,8 +55,11 @@ button {
     cursor: pointer; 
     transition: all 0.2s;
 }
+#disconnectBtn {
+    background: red;
+}
 button:hover:not(:disabled) { background: #059669; transform: translateY(-1px); }
-button:disabled { background: #9ca3af; cursor: not-allowed; transform: none; }
+button:disabled, #disconnectBtn:disabled { background: #9ca3af; cursor: not-allowed; transform: none; }
 .result { 
     min-height: 20px; 
     padding: 0.75rem; 
@@ -73,8 +76,7 @@ button:disabled { background: #9ca3af; cursor: not-allowed; transform: none; }
     font-weight: bold; 
     margin-bottom: 1.5rem;
 }
-.status.connected { background: #dcfce7; color: #166534; }
-.status.disconnected { background: #fef2f2; color: #dc2626; }
+
 @media (max-width: 600px) {
     .input-group { flex-direction: column; }
     input { min-width: auto; }

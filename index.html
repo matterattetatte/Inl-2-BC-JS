@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anvil Block Explorer</title>
-    <link rel="stylesheet" href="./style.css">
-    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.2/ethers.umd.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="https://etherscan.io/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <div class="container">
-        <h1>🚀 Anvil Block Explorer</h1>
-        
-        <div id="status" class="status disconnected">🔌 Disconnected</div>
-        
+        <h1><img src="https://etherscan.io/favicon.ico" /> Anvil Block Explorer</h1>
+
+        <div id="status" class="status">
+            <button id="connectBtn">Connect</button>
+            <button id="disconnectBtn" disabled>Disconnect</button>
+        </div>
+
         <section class="card">
             <h2>💰 Balance Check</h2>
             <div class="input-group">
@@ -21,13 +26,12 @@
             </div>
             <div id="balance" class="result"></div>
         </section>
-        
+
         <section class="card">
             <h2>🧱 Block Height</h2>
-            <button id="getBlock">Refresh</button>
             <div id="blockNum" class="result"></div>
         </section>
-        
+
         <section class="card">
             <h2>📤 Send Transaction</h2>
             <div class="input-group">
@@ -43,4 +47,5 @@
     <script type="module" src="./src/blockchain.js"></script>
     <script type="module" src="./src/ui.js"></script>
 </body>
+
 </html>

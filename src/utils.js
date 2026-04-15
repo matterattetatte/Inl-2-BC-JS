@@ -1,3 +1,5 @@
+import * as ethers from 'https://cdn.jsdelivr.net/npm/ethers@6.13.2/+esm';
+
 export function formatEther(wei) {
     return ethers.formatEther(wei)
 }

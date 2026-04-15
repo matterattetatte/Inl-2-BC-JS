@@ -15,8 +15,7 @@ anvil \
   --auto-impersonate \
   --steps-tracing \
   --disable-code-size-limit \
-  --block-base-fee-per-gas 0 \
-  --verbosity 3
+  --block-base-fee-per-gas 0
 
 echo "✅ Anvil running at http://localhost:8545"
 echo "📱 MetaMask: Chain ID 31337, RPC http://127.0.0.1:8545"

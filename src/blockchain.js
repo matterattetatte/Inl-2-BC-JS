@@ -1,33 +1,49 @@
-import { formatEther, parseEther } from './utils.js'
+import * as ethers from 'https://cdn.jsdelivr.net/npm/ethers@6.13.2/+esm';
+import { formatEther, parseEther } from './utils.js';
 
-const RPC_URL = 'http://localhost:8545'
+const ANVIL_RPC = 'http://localhost:8545';
 
-export async function connectProvider() {
-    return new ethers.JsonRpcProvider(RPC_URL)
-}
+let cachedProvider = null;
 
-export async function getBalance(address) {
-    const provider = await connectProvider()
-    const balance = await provider.getBalance(address)
-    return formatEther(balance)
-}
-
-export async function getBlockNumber() {
-    const provider = await connectProvider()
-    return await provider.getBlockNumber()
-}
-
-export async function sendTransaction(fromSigner, toAddress, amountEth) {
-    const tx = await fromSigner.sendTransaction({
-        to: toAddress,
-        value: parseEther(amountEth)
-    })
-    return await tx.wait()
+export async function getProvider() {
+    if (cachedProvider) return cachedProvider;
+    
+    cachedProvider = new ethers.JsonRpcProvider(ANVIL_RPC);
+    return cachedProvider;
 }
 
 export async function getSigner() {
-    if (!window.ethereum) throw new Error('MetaMask required')
-    await window.ethereum.request({ method: 'eth_requestAccounts' })
-    const provider = new ethers.BrowserProvider(window.ethereum)
-    return await provider.getSigner()
+    const provider = await getProvider();
+
+    if (!window.ethereum) throw new Error('Install MetaMask');
+    
+    await window.ethereum.request({ method: 'eth_requestAccounts' });
+    
+    const metamaskProvider = new ethers.BrowserProvider(window.ethereum);
+    const signer = await metamaskProvider.getSigner();
+    
+    const network = await provider.getNetwork();
+    console.log('Connected to Anvil:', network.chainId === 31337n);
+    
+    return signer;
+}
+
+export async function getBalance(address) {
+    const provider = await getProvider();
+    const balance = await provider.getBalance(address);
+    return formatEther(balance);
+}
+
+export async function getBlockNumber() {
+    const provider = await getProvider();
+    return await provider.getBlockNumber();
+}
+
+export async function sendTransaction(signer, toAddress, amountEth) {
+    if (!signer) throw new Error('Signer required');
+    const tx = await signer.sendTransaction({
+        to: toAddress,
+        value: parseEther(amountEth)
+    });
+    return await tx.wait();
 }
