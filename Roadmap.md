@@ -29,14 +29,14 @@ project/
 - [x] 🔗 MetaMask wallet connection integration
 
 ## 🧪 Testing & Debugging
-- [ ] 🧑‍💻 Test with Anvil's 10 pre-funded test accounts
-- [ ] 🔍 Verify balance, block number, transactions work
-- [ ] 📋 Check Anvil console for transaction confirmations
-- [ ] 🚨 Test invalid addresses and error cases
-- [ ] 🛠️ Use browser DevTools for network debugging
+- [x] 🧑‍💻 Test with Anvil's 10 pre-funded test accounts
+- [x] 🔍 Verify balance, block number, transactions work
+- [x] 📋 Check Anvil console for transaction confirmations
+- [x] 🚨 Test invalid addresses and error cases
+- [x] 🛠️ Use browser DevTools for network debugging
 
 ## 📤 Submission Preparation
 - [ ] ✅ Works in browser without local server (GitHub Pages ready). Host anvil on some cloud provider.
-- [ ] 📖 README.md with Anvil setup, MetaMask config, test instructions
+- [x] 📖 README.md with Anvil setup, MetaMask config, test instructions
 - [ ] 📸 Screenshots of balance display and successful transaction
 - [ ] 🔗 Live demo link from GitHub Pages
