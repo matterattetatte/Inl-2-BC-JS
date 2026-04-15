@@ -92,7 +92,7 @@ document.getElementById('sendTx').addEventListener('click', async () => {
 })
 
 window.addEventListener('load', () => {
-    setInterval(updateBlock, 2000)
+    setInterval(updateBlock, 12_000)
     setUIConnected()
 })
 

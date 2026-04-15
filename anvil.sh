@@ -11,7 +11,7 @@ anvil \
   --chain-id 31337 \
   --mnemonic "test test test test test test test test test test test junk" \
   --balance 1000000 \
-  --block-time 2 \
+  --block-time 12 \
   --auto-impersonate \
   --steps-tracing \
   --disable-code-size-limit \
