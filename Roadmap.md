@@ -1,11 +1,11 @@
-# 🚀 Ethereum Block Explorer Checklist
+# 🚀 Anvil Block Explorer Checklist
 
 ## 🛠️ Environment Setup
-- [ ] 📁 Create `index.html`, `style.css`, `src/`
-- [ ] 🔗 Add ethers.js CDN in HTML
-- [ ] ⚙️ Install Foundry and start Anvil local blockchain
-- [ ] 🧳 Configure MetaMask for Anvil network (local RPC endpoint, chain ID 31337)
-- [ ] 📂 Create JS structure: `src/blockchain.js`, `src/ui.js`, `src/utils.js`
+- [x] 📁 Create `index.html`, `style.css`, `src/`
+- [x] 🔗 Add ethers.js CDN in HTML
+- [x] ⚙️ Install and start Anvil local blockchain
+- [x] 🧳 Configure MetaMask for Anvil network (local RPC endpoint, chain ID 31337)
+- [x] 📂 Create JS structure: `src/blockchain.js`, `src/ui.js`, `src/utils.js`
 
 ## 📁 File Structure
 ```
