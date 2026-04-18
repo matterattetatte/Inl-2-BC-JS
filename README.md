@@ -10,6 +10,8 @@ A lightweight, browser-based Ethereum block explorer and wallet interface specif
   * **Anvil Integration:** Pre-configured to work with the standard Anvil development environment.
   * **Responsive Design:** Clean, modern UI that works on desktop and mobile browsers.
 
+Demo (sepolia network): https://matterattetatte.github.io/Inl-2-BC-JS
+
 -----
 
 ## 🛠️ Tech Stack
