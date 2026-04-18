@@ -26,7 +26,6 @@ Demo (sepolia network): https://matterattetatte.github.io/Inl-2-BC-JS
 ## 📋 Prerequisites
 
 1.  **Anvil:** You must have Anvil installed.
-      * *Installation:* `curl -L https://foundry.paradigm.xyz | bash` followed by `foundryup`.
 2.  **MetaMask Browser Extension or Brave Wallet:** Installed in your browser.
 
 -----
